@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "seven_seven": {
+      "main": "src/seven_seven/main.mo",
+      "type": "motoko"
+    },
+    "seven_seven_assets": {
+      "dependencies": [
+        "seven_seven"
+      ],
+      "frontend": {
+        "entrypoint": "src/seven_seven_assets/src/index.html"
+      },
+      "source": [
+        "src/seven_seven_assets/assets",
+        "dist/seven_seven_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.7.7",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
